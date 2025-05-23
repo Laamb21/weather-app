@@ -21,7 +21,7 @@ A Python-based weather dashboard application that displays real-time weather inf
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/us-cities-weather-dashboard.git
+git clone https://github.com/Laamb21/weather-app.git
 cd us-cities-weather-dashboard
 ```
 
