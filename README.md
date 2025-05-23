@@ -22,7 +22,7 @@ A Python-based weather dashboard application that displays real-time weather inf
 1. Clone the repository:
 ```bash
 git clone https://github.com/Laamb21/weather-app.git
-cd us-cities-weather-dashboard
+cd weather-app
 ```
 
 2. Create and activate a virtual environment (recommended):
@@ -40,6 +40,15 @@ source venv/bin/activate
 ```bash
 pip install -r requirements.txt
 ```
+
+4. Set up environment variables:
+   - Create a new file named `.env` in the project root
+   - Add the following content:
+     ```
+     APP_EMAIL=your@email.com
+     ```
+   - Replace `your@email.com` with your actual email address
+   - This file will be ignored by git to protect your information
 
 ## Usage
 

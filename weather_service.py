@@ -2,6 +2,8 @@ import requests
 from typing import Dict, Optional, Tuple
 import json
 from datetime import datetime
+import os
+from dotenv import load_dotenv
 
 from config import (
     ERROR_NO_DATA,
@@ -13,13 +15,20 @@ from config import (
     MAX_FORECAST_DAYS
 )
 
+# Load environment variables
+load_dotenv()
+
 class WeatherService:
     """Service for fetching weather data from National Weather Service API"""
     
     def __init__(self):
         self.session = requests.Session()
+        
+        # Get email from environment variable or use a default
+        app_email = os.getenv('APP_EMAIL', 'weather-app-user@example.com')
+        
         self.session.headers.update({
-            'User-Agent': '(US Cities Weather App, your@email.com)',
+            'User-Agent': f'(US Cities Weather App, {app_email})',
             'Accept': 'application/json'
         })
         
